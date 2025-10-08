@@ -6,7 +6,7 @@
 /*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 16:04:03 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/10/08 18:56:06 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/10/08 19:27:39 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,19 @@ Return value:
 int ft_isalpha(unsigned char c)
 {
     if  (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
-       write(1, &c, 1);
+    {   
+     //   write(1, &c, 1);
+        return 1;
+    }
     else 
-    return (0);
+        return (0);
 }
 
 int main(void)
 {
-    char c;
-    ft_isalpha(c);
-    write(1, &c ,1);
+    int c;
+    c = ft_isalpha('3');
+    printf("%i\n", (int)c);
 }
 
 // 1st Review
