@@ -1,39 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isdigit.c                                          :+:      :+:    :+:   */
+/*   strlen.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 18:59:31 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/10/13 11:21:11 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/10/13 20:35:12 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-isdigit() checks for a digit (0 through 9).
-trl_l,  is‐
-l, isxdigit_l -
 
 #include <unistd.h>
 #include <stdio.h>
+#include <string.h>
 
-*/
-
-int ft_isdigit(int c)
+const char* ft_strlen(const char *i)
 {
-    if(c >= '0' && c <= '9')
+    while (i >= 33 && i <= 127 && i != '\0')
     {
-        return (1);
-    }
-    else 
-        return (0);
+        i++;
+    } 
+       return (const char *i);
 }
 
 
-// int main(void)
-// {
-//     int c;
-//     c = ft_isdigit('a');
-//     printf("%i\n", (int)c);
-// }
+int main(void)
+{
+    const char *i;
+    *i = ft_strlen("2356");
+    printf("%i\n", (const char)i);
+}

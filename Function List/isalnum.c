@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isdigit.c                                          :+:      :+:    :+:   */
+/*   isalnum.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 18:59:31 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/10/13 11:21:11 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/10/13 18:41:45 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-isdigit() checks for a digit (0 through 9).
-trl_l,  is‐
-l, isxdigit_l -
 
-#include <unistd.h>
-#include <stdio.h>
+// #include <unistd.h>
+// #include <stdio.h>
 
-*/
-
-int ft_isdigit(int c)
+int ft_isalnum(int c)
 {
-    if(c >= '0' && c <= '9')
+    if(c >= '0' && c <= '9' || c>='a' && c <='z' || c>='A' && c <='Z')
     {
         return (1);
     }
@@ -34,6 +28,6 @@ int ft_isdigit(int c)
 // int main(void)
 // {
 //     int c;
-//     c = ft_isdigit('a');
+//     c = ft_isalnum('/');
 //     printf("%i\n", (int)c);
 // }
