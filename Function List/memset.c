@@ -1,36 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen.c                                           :+:      :+:    :+:   */
+/*   memset.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 18:59:31 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/10/14 16:36:59 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/10/14 19:40:13 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-// #include <unistd.h>
-// #include <stdio.h>
-// #include <string.h>
- 
-size_t ft_strlen(const char *string)
-{
-    size_t c;
+#include <unistd.h>
+#include <stdio.h>
+#include <string.h>
 
-    c = 0;
-    while (string[c] != '\0')
+ 
+void *ft_memset(void *s, int c, size_t n)
+{
+    //unsigned char *b;
+    // size_t n;
+
+    // n = 0;
+
+    unsigned char *p = (unsigned char *)s; // converting to a byte pointer
+    int c = unsigned char *b; // convert to a byte
+
+    while (*p[n] != len(c))
     {
-        c++;
-    } 
-       return (c);
+        n++;
+    }
+       return (*p[n]);
 }
 
 
-// int main(void)
-// {
-//     int c;
-//     c = ft_strlen("okfh");
-//     printf("%i\n", c);
-// }
+int main(int c, void *s)
+{
+    size_t n;
+    ft_memset("ao", 48, 2);
+    printf("%p\n", &n);
+}
