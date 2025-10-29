@@ -6,7 +6,7 @@
 /*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 18:59:31 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/10/27 15:02:11 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/10/29 12:51:00 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 */
 
 
- void *memmove(void *dest, const void *src, size_t n)
+ void *ft_memmove(void *dest, const void *src, size_t n)
  {
     unsigned char *d;
     const unsigned char *s;
@@ -49,7 +49,7 @@
  int main(void)
  {
     char dest[15] = "sonounfallito";
-    memmove(dest + 4, dest, 4);
+    ft_memmove(dest + 4, dest, 4);
     printf("%s\n", dest);
     return(0);
  }

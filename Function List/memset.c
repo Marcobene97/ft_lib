@@ -6,7 +6,7 @@
 /*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 18:59:31 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/10/16 19:36:54 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/10/29 12:52:01 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,22 @@
 #include <string.h>
 
  
-// void *ft_memset(void *s, int c, size_t n)
-// {
-//     //unsigned char *b;
-//     // size_t n;
+void *ft_memset(void *s, int c, size_t n)
+{
+    //unsigned char *b;
+    // size_t n;
 
-//     // n = 0;
+    // n = 0;
 
-//     unsigned char *p = (unsigned char *)s; // converting to a byte pointer
-//     int c = unsigned char *b; // convert to a byte
+    unsigned char *p = (unsigned char *)s; // converting to a byte pointer
+    int c = unsigned char *b; // convert to a byte
 
-//     while (*p[n] != len(c))
-//     {
-//         n++;
-//     }
-//        return (*p[n]);
-// }
+    while (*p[n] != len(c))
+    {
+        n++;
+    }
+       return (*p[n]);
+}
 
 
 // int main(int c, void *s)
@@ -98,7 +98,7 @@ void    *ft_memset(void *s, int c, size_t n)
 //     return 0;
 // }
 //     printf("Before: %s\n", c);
-
+unsigned
 //     // Test 1: replace first 3 bytes with 'A'
 //     ft_memset(c, 'v', 5);
 //     printf("After  (fill 'v', len 5): %s\n", c);
