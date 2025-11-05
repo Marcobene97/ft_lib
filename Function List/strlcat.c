@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   strlcat.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 18:44:15 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/10/30 15:34:20 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/10/31 10:12:49 by marcobenede      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

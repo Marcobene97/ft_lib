@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   memset.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 18:59:31 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/10/29 12:52:01 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/11/03 15:36:05 by marcobenede      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <stdio.h>
 #include <string.h>
 
- 
+
 void *ft_memset(void *s, int c, size_t n)
 {
     //unsigned char *b;
@@ -40,13 +40,12 @@ void *ft_memset(void *s, int c, size_t n)
 //     ft_memset("ao", 48, 2);
 //     printf("%p\n", &n);
 // }
-ggg
 
 void    *ft_memset(void *s, int c, size_t n)
 {
     /* declaring our temporary pointer */
     unsigned char    *ptr;
-    
+
     /* making our temporary pointer equal to s converted to unsigned char * */
     ptr = (unsigned char *) s;
     /* looping on our temporary pointer while we didn't reach n */
@@ -97,8 +96,7 @@ void    *ft_memset(void *s, int c, size_t n)
 
 //     return 0;
 // }
-//     printf("Before: %s\n", c);
-unsigned
+//     printf("Before: %s\n", c);unsigned
 //     // Test 1: replace first 3 bytes with 'A'
 //     ft_memset(c, 'v', 5);
 //     printf("After  (fill 'v', len 5): %s\n", c);

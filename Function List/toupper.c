@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen.c                                           :+:      :+:    :+:   */
+/*   toupper.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/08 18:59:31 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/11/02 15:59:21 by marcobenede      ###   ########.fr       */
+/*   Created: 2025/10/31 10:15:14 by marcobenede       #+#    #+#             */
+/*   Updated: 2025/11/03 15:54:37 by marcobenede      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-// #include <unistd.h>
-// #include <stdio.h>
- #include <string.h>
+ // #include <unistd.h>
+#include <stdio.h>
+#include <string.h>
  
-size_t ft_strlen(const char *string)
-{
-    size_t c;
-
-    c = 0;
-    while (string[c] != '\0')
+   int ft_toupper(int c)
+   {
+    if( c >='a' && c <= 'z')
     {
-        c++;
-    } 
-       return (c);
-}
+        c = c - 32;
+    }
+    return(c);
+   }
 
-
-// int main(void)
-// {
-//     int c;
-//     c = ft_strlen("okfh");
-//     printf("%i\n", c);
-// }
+   int main(void)
+   {
+    printf("%c\n", ft_toupper('a')); // prints A
+    printf("%c\n", ft_toupper('B')); // prints B
+    printf("%c\n", ft_toupper('1')); // prints 1
+   }

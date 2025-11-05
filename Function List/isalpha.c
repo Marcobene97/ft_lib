@@ -3,12 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   isalpha.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 16:04:03 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/10/13 11:15:23 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/11/03 15:12:52 by marcobenede      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
+#include <unistd.h>
+#include <stdio.h>
+
+int ft_isalpha(unsigned char c)
+{
+    if  (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
+    {
+        return (1);
+    }
+    else
+        return (0);
+}
+
+int main(void)
+{
+    int c;
+    c = ft_isalpha('a');
+    printf("%i\n", (int)c);
+}
 
 /*
 Function class of isalpha: 1. isalpha()
@@ -20,26 +41,5 @@ Function class of isalpha: 1. isalpha()
 Return value:
        The  values  returned  are  nonzero  if  the character c falls into the
        tested class, and zero if not.
-              
+
 */
-
-#include <unistd.h>
-#include <stdio.h>
-
-int ft_isalpha(unsigned char c)
-{
-    if  (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
-    {   
-     //   write(1, &c, 1);
-        return (1);
-    }
-    else 
-        return (0);
-}
-
-int main(void)
-{
-    int c;
-    c = ft_isalpha('a');
-    printf("%i\n", (int)c);
-}

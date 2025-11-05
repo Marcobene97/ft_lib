@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   strlcpy.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 14:58:09 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/10/29 18:45:46 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/11/02 17:09:24 by marcobenede      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

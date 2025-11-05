@@ -3,30 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   isdigit.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 18:59:31 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/10/13 11:21:11 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/11/03 15:14:23 by marcobenede      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-isdigit() checks for a digit (0 through 9).
-trl_l,  is‐
-l, isxdigit_l -
-
-#include <unistd.h>
-#include <stdio.h>
-
-*/
-
+//#include <unistd.h>
+//#include <stdio.h>
 int ft_isdigit(int c)
 {
     if(c >= '0' && c <= '9')
     {
         return (1);
     }
-    else 
+    else
         return (0);
 }
 
@@ -37,3 +29,10 @@ int ft_isdigit(int c)
 //     c = ft_isdigit('a');
 //     printf("%i\n", (int)c);
 // }
+
+/*
+isdigit() checks for a digit (0 through 9).
+trl_l,  is‐
+l, isxdigit_l -
+
+*/

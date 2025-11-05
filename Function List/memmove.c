@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   memmove.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 18:59:31 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/10/29 12:51:00 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/11/03 15:52:00 by marcobenede      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,37 +15,27 @@
 #include <stdio.h>
 #include <string.h>
 
-/* 
-1. Declare x two pointer strings, one of them constant
-2. Function logic: assuming src bigger than dest:
-- Dereference pointers turning them into chars for bits counting
-- Assuming string s > d ; initialise i var as counter, associating it to n (length of bit to copy)
-- Add each time i till i reaches n (i should 
-
-*/
-
 
  void *ft_memmove(void *dest, const void *src, size_t n)
  {
     unsigned char *d;
     const unsigned char *s;
-    
+
     d = (unsigned char *)dest;
     s = (const unsigned char *)src;
 
-    //build if statement that counts 
-    if (d < s) 
+    //build if statement that counts
+    if (d < s)
    {
       for (size_t i = 0; i < n; i++) d[i] = s[i];
-   } 
-    else 
-   {
-      for (size_t i = n; i !=0; i--) d[i-1] = s[i-1];   
    }
-    
+    else
+   {
+      for (size_t i = n; i !=0; i--) d[i-1] = s[i-1];
+   }
+
    return dest;
  }
-/**/ 
  int main(void)
  {
     char dest[15] = "sonounfallito";
@@ -60,4 +50,12 @@
 const unsigned char *ps = s + (i - 1);
 *pd = *ps;
  */
- 
+
+ /*
+1. Declare x two pointer strings, one of them constant
+2. Function logic: assuming src bigger than dest:
+- Dereference pointers turning them into chars for bits counting
+- Assuming string s > d ; initialise i var as counter, associating it to n (length of bit to copy)
+- Add each time i till i reaches n (i should
+
+*/
