@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 13:23:00 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/11/05 14:21:06 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/11/08 01:32:30 by marcobenede      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,58 +14,59 @@
 #include <stdio.h>
 #include <string.h>
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    //count string s till \0'
-    //set new substring name
-    //Allocate memory to it within constraints of start for start and len to finish
-    //Set start iteration till len i++
-    //Copy string portion into new substring as you did in strdup
-    //Return char of new string
+	size_t	i;
+	size_t	lenstr;
+	size_t	available;
+	size_t	copy_len;
+	size_t	realstart;
+	char	*destring;
 
-    size_t i;
-    size_t j;
-    size_t lenstr;
-    char *destring;
-
-    if(s == NULL)
-    return(NULL);
-
-    i = 0;
-    while(s[i])
-    {
-        i++;
-    }
-    lenstr = i;
-    while(start + len > lenstr)
-    {
-        destring = malloc(len + 1);   
-    }
-    if(destring)
-    return(NULL);
-    if(start > lenstr)
-    return(malloc(1) + '\0');
-    
-    j = 0;
-    for (i = start; len == i; j++)
-    destring[j] = s[start+i];
-    return(destring);
+	if (s == NULL)
+		return (NULL);
+	i = 0;
+	while (s[i])
+		i++;
+	realstart = (size_t)start;
+	lenstr = i;
+	if (realstart >= lenstr || len == 0)
+	{
+		destring = (char *)malloc(1);
+		if (!destring)
+			return (NULL);
+		destring[0] = '\0';
+		return (destring);
+	}
+	available = lenstr - realstart;
+	copy_len = (len < available) ? len : available;
+	destring = (char *)malloc(copy_len + 1);
+	if (!destring)
+		return (NULL);
+	i = 0;
+	while (i < copy_len)
+	{
+		destring[i] = s[realstart + i];
+		i++;
+	}
+	destring[copy_len] = '\0';
+	return (destring);
 }
 
-int main(void)
+int	main(void)
 {
-    char *s = ft_substr("abcde", 2,4);
-    printf("%s\n",s);
-    free(s);
-    return(0);
+	char	*s = ft_substr("abcde", 1, 4);
+
+	printf("%s\n", s);
+	free(s);
 }
 
-/* 
+/*
 Function name ft_substr
 Prototype char *ft_substr(char const *s, unsigned int start,
 size_t len);
 Turn in files -
-Parameters 
+Parameters
 1. s: The original string from which to create the substring.
 2. start: The starting index of the substring within ’s’.
 3. len: The maximum length of the substring.
