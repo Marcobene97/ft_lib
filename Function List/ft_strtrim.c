@@ -6,7 +6,7 @@
 /*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 18:59:31 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/11/09 22:41:00 by marcobenede      ###   ########.fr       */
+/*   Updated: 2025/11/09 22:43:28 by marcobenede      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,9 @@ char *ft_strtrim(char const *s1, char const *set)
 
 	len1 = ft_strlen(s1);
 	lenset = ft_strlen(set);
+	if (ft_strchr(set, c) != NULL)
+    // check32
+
 	while(s1[start] == set)
 	start++;
 
