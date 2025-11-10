@@ -6,7 +6,7 @@
 /*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 18:59:31 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/11/04 22:16:33 by marcobenede      ###   ########.fr       */
+/*   Updated: 2025/11/10 15:44:01 by marcobenede      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ int ft_atoi(const char *nptr)
         }
         i++;
     }
-
     while(nptr[i] >= '0' && nptr[i] <= '9')
     {
         digit = nptr[i] - '0';

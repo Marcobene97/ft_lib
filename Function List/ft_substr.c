@@ -6,7 +6,7 @@
 /*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 13:23:00 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/11/08 01:32:30 by marcobenede      ###   ########.fr       */
+/*   Updated: 2025/11/10 08:47:31 by marcobenede      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	destring[copy_len] = '\0';
 	return (destring);
 }
-
+/*
 int	main(void)
 {
 	char	*s = ft_substr("abcde", 1, 4);
@@ -61,7 +61,6 @@ int	main(void)
 	free(s);
 }
 
-/*
 Function name ft_substr
 Prototype char *ft_substr(char const *s, unsigned int start,
 size_t len);

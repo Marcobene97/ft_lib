@@ -1,18 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strdup.c                                           :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 10:03:47 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/11/05 13:27:59 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/11/10 09:13:15 by marcobenede      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 
 char *ft_strdup(const char *s)
