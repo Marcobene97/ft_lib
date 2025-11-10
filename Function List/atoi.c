@@ -6,10 +6,13 @@
 /*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 18:59:31 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/11/10 15:44:01 by marcobenede      ###   ########.fr       */
+/*   Updated: 2025/11/10 21:20:37 by marcobenede      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+The atoi() function converts the initial portion of the string pointed to by str to int representation
+ */
 //#include <stdlib.h>
 #include <stdio.h>
 

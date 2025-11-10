@@ -6,7 +6,7 @@
 /*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 11:24:05 by marcobenede       #+#    #+#             */
-/*   Updated: 2025/11/10 18:03:58 by marcobenede      ###   ########.fr       */
+/*   Updated: 2025/11/10 19:47:38 by marcobenede      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static char *make_word(char const *s, size_t start, size_t end)
 	char *word;
 	size_t i;
 
-	word = malloc((end - start + 1) *sizeof(char));
+	word = malloc((start - end + 1) *sizeof(char));
 	if(!word)
 		return(NULL);
 	i = 0;
