@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
+/*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 13:23:00 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/11/10 08:47:31 by marcobenede      ###   ########.fr       */
+/*   Updated: 2025/11/12 17:59:41 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -20,17 +18,36 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	lenstr;
 	size_t	available;
 	size_t	copy_len;
-	size_t	realstart;
 	char	*destring;
 
 	if (s == NULL)
 		return (NULL);
-	i = 0;
-	while (s[i])
-		i++;
-	realstart = (size_t)start;
+	lenstr = ft_strlen(s);
+	available = lenstr - (size_t)start;
+	copy_len = (len < available) ? len : available;
+	destring = (char *)malloc(copy_len + 1);
 	lenstr = i;
-	if (realstart >= lenstr || len == 0)
+	if (!destring)
+		return (NULL);
+	i = 0;
+	while (i < copy_len)
+	{
+		destring[i] = s[start + i];
+		i++;
+	}
+	destring[copy_len] = '\0';
+	return (destring);
+}
+
+/* int	main(void)
+{
+	char	*s = ft_substr("abcde", 1, 4);
+
+	printf("%s\n", s);
+	free(s);
+} */
+/*
+	if (start >= lenstr || len == 0)
 	{
 		destring = (char *)malloc(1);
 		if (!destring)
@@ -38,28 +55,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		destring[0] = '\0';
 		return (destring);
 	}
-	available = lenstr - realstart;
-	copy_len = (len < available) ? len : available;
-	destring = (char *)malloc(copy_len + 1);
-	if (!destring)
-		return (NULL);
-	i = 0;
-	while (i < copy_len)
-	{
-		destring[i] = s[realstart + i];
-		i++;
-	}
-	destring[copy_len] = '\0';
-	return (destring);
-}
-/*
-int	main(void)
-{
-	char	*s = ft_substr("abcde", 1, 4);
-
-	printf("%s\n", s);
-	free(s);
-}
 
 Function name ft_substr
 Prototype char *ft_substr(char const *s, unsigned int start,

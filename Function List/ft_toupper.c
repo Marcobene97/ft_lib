@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tolower.c                                          :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
+/*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/31 11:48:17 by marcobenede       #+#    #+#             */
-/*   Updated: 2025/11/01 00:10:44 by marcobenede      ###   ########.fr       */
+/*   Created: 2025/10/31 10:15:14 by marcobenede       #+#    #+#             */
+/*   Updated: 2025/11/12 17:37:47 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-#include <string.h>
-
-   int ft_toupper(int c)
-   {
-    if( c >='A' && c <= 'Z')
+#include "libft.h"
+ 
+int ft_toupper(int c)
+{
+    if( c >='a' && c <= 'z')
     {
-        c = c + 32;
-    } 
+        c = c - 32;
+    }
     return(c);
-   }
+}
 
-  /*  int main(void)
+/*    int main(void)
    {
-    printf("%c\n", ft_toupper('A')); // prints A
-    printf("%c\n", ft_toupper('b')); // prints B
+    printf("%c\n", ft_toupper('a')); // prints A
+    printf("%c\n", ft_toupper('B')); // prints B
     printf("%c\n", ft_toupper('1')); // prints 1
    } */

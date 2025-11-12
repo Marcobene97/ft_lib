@@ -1,19 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memcmp.c                                           :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
+/*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 18:59:31 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/11/03 15:35:35 by marcobenede      ###   ########.fr       */
+/*   Updated: 2025/11/12 13:31:34 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// function locates the first occurrence of c (converted to an unsigned char) in string s
-
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void *ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -32,7 +29,7 @@ void *ft_memcmp(const void *s1, const void *s2, size_t n)
     }
 }
 
-int main(void)
+/* int main(void)
 {
     const char s1[] = "abcde";
     const char s2[] = "efgba";
@@ -40,7 +37,8 @@ int main(void)
     int res = ft_memcmp(s1, s2, n);
     printf("%lu\n", res);
     return(0);
-}
+} */
 
 
+// function locates the first occurrence of c (converted to an unsigned char) in string s
 //returns a pointer to the byte located, or NULL if no such byte exists within n bytes

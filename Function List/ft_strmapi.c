@@ -3,21 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
+/*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 07:56:52 by marcobenede       #+#    #+#             */
-/*   Updated: 2025/11/11 21:22:51 by marcobenede      ###   ########.fr       */
+/*   Updated: 2025/11/12 17:35:56 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Applies the function f to each character of the string s, passing its index as the first argument and the character itself as the second.
-A new string is created (using malloc(3)) to store the results from the successive applications of f.
-
-	f(i, s[i]);
-*/
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
@@ -42,6 +34,13 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     return(str);
 }
 /*
+
+/*
+Applies the function f to each character of the string s, passing its index as the first argument and the character itself as the second.
+A new string is created (using malloc(3)) to store the results from the successive applications of f.
+
+	f(i, s[i]);
+
 // Example 1: make everything uppercase
 char to_upper(unsigned int i, char c)
 {

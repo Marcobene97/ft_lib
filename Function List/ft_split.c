@@ -3,28 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
+/*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 11:24:05 by marcobenede       #+#    #+#             */
-/*   Updated: 2025/11/10 19:47:38 by marcobenede      ###   ########.fr       */
+/*   Updated: 2025/11/12 17:13:14 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
-
-/*
-// TODO:
-    // 1. Walk through s again
-    // 2. For each word:
-    //      - find start & end
-    //      - allocate (len + 1)
-    //      - copy characters
-    //      - store pointer in arr[index]
-    // 3. End with arr[words] = NULL
-    // 4. On malloc failure: free everything & return NULL
- */
 
 size_t count_words(char const *s,char c)
 {
@@ -47,21 +33,6 @@ size_t count_words(char const *s,char c)
 	return(count);
 }
 
-static char *make_word(char const *s, size_t start, size_t end)
-{
-	char *word;
-	size_t i;
-
-	word = malloc((start - end + 1) *sizeof(char));
-	if(!word)
-		return(NULL);
-	i = 0;
-	while(end > start)
-		word[i++] = s[start++];
-	word[i] = '\0';
-	return(word);
-}
-
 static void	free_words(char **arr, size_t w)
 {
 	size_t i;
@@ -74,54 +45,44 @@ static void	free_words(char **arr, size_t w)
 	}
 	free(arr);
 }
+
 char **ft_split(char const *s, char c)
 {
 	char **arr;
-	size_t start;
-	size_t words;
-	size_t len;
-	size_t w;
-	size_t i;
-
-
+	size_t i[3];
+	ft_bzero(i, sizeof(i));
+	
 	if(!s)
-	return (NULL);
-
-	words = count_words(s,c);
-	arr = malloc((words + 1) * sizeof(char *));
+		return (NULL);
+	i[1] = count_words(s,c);
+	arr = malloc((i[1] + 1) * sizeof(char *));
 	if(!arr)
-	return(NULL);
-
-	i = 0;
-	w = 0;
-	while(s[i] != '\0')
+		return(NULL);
+	i[1] = 0;
+	while(s[i[0]])
 	{
-		while(s[i] && s[i] == c)
-		i++;
-		if(!s[i])
-		break;
-		start = i;
-		while(s[i] && s[i] != c)
-		i++;
-		arr[w] = make_word(s, start, i);
-		if(!arr[w])
-		{
-			free_words(arr,w);
-			return(NULL);
-		}
-		w++;
+		while(s[i[0]] && s[i[0]] == c)
+			i[0]++;
+		if(!s[i[0]])
+			break;
+		i[2] = i[0];
+		while(s[i[0]] && s[i[0]] != c)
+			i[0]++;
+		arr[i[1]] = ft_substr(s, i[2], i[0] - i[2]);
+		if(!arr[i[1]++] && --i[1])
+			return(free_words(arr, i[1]), NULL);
 	}
-
-    arr[w] = (NULL);
-	return(arr);
+	return(arr[i[1]] = (NULL),arr);
 }
 
-int main(void)
+
+/* int main(void)
 {
-	char const	*s = "adesso sono qui";
+	char const	*s = "yo who is this";
 	char		c = ' ';
 	char	  **arr;
 	size_t		i;
+
 
 	arr = ft_split(s, c);
 	if (!arr)
@@ -136,8 +97,24 @@ int main(void)
 	}
 	free(arr);
 	return (0);
-}
+} */
 /*
+substitute i[0] = i
+i[1] = i
+*  static char *make_word(char const *s, size_t start, size_t end)
+{
+	char *word;
+	size_t i;
+
+	word = malloc((start - end + 1) *sizeof(char));
+	if(!word)
+		return(NULL);
+	i = 0;
+	while(end > start)
+		word[i++] = s[start++];
+	word[i] = '\0';
+	return(word);
+} 
 Function name ft_split Prototype char **ft_split(char const *s, char c);
 Turn in filesParameters
 s: The string to be split.
@@ -156,4 +133,17 @@ The array must end with a NULL pointer.
 - return new substring for each char c recognised in (can be a single char or a string of chars within char c)
 - Create a new substring for each occurrence of c in s
 - conglomerate the substrings into an array of strings.
-*/
+
+
+/*
+// TODO:
+    // 1. Walk through s again
+    // 2. For each word:
+    //      - find start & end
+    //      - allocate (len + 1)
+    //      - copy characters
+    //      - store pointer in arr[index]
+    // 3. End with arr[words] = NULL
+    // 4. On malloc failure: free everything & return NULL
+ */
+

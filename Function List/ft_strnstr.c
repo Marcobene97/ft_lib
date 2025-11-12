@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strnstr.c                                          :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 16:31:02 by marcobenede       #+#    #+#             */
-/*   Updated: 2025/11/04 16:14:53 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/11/12 17:36:28 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h> 
-//#include <stdio.h> 
+#include "libft.h"
 
 char *ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -37,8 +36,6 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
         i++;
     }
     if (len_little > len)
-    return(NULL);
-
     return(NULL);
 }
 /* int main(void)

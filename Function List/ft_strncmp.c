@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strncmp.c                                          :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 16:31:02 by marcobenede       #+#    #+#             */
-/*   Updated: 2025/11/04 15:39:13 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/11/12 17:36:16 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h> 
-#include <stdio.h> 
+#include "libft.h"
 
 int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -33,7 +32,7 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
     return ((unsigned char) s1[i] - (unsigned char) s2[i]);
 }
 
-int main(void)
+/* int main(void)
 {
     const char *s1 = "abcd";
     const char *s2 = "abcd";
@@ -41,7 +40,7 @@ int main(void)
     int res = ft_strncmp(s1,s2,n);
     printf("%i\n", res);
     return(res);
-}
+} */
 
 /* ft_strncmp("abc","abc",3) → 0
 

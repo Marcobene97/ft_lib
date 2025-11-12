@@ -1,56 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/01 00:11:07 by marcobenede       #+#    #+#             */
-/*   Updated: 2025/11/12 17:13:19 by mbenedet         ###   ########.fr       */
+/*   Created: 2025/11/02 15:37:19 by marcobenede       #+#    #+#             */
+/*   Updated: 2025/11/12 17:36:35 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
-{
+ char *ft_strrchr(const char *s, int c)
+ {
     const char *p = s;
-    
-    for(;;)
+
+    while(*p != '\0')
     {
-        if(*p == (unsigned char) c)
-        return((char *)p);
-        if(*p == '\0')
-        return(NULL);
         p++;
     }
+
+    while(p >= s)
+    {
+        if(*p == (unsigned char)c)
+        return((char *)p);
+        p--;
+    }
+    return(NULL);
  }
 
-/* int main(void)
-{
+ /* int main(void)
+ {
     int c;
     const char *s;
-    
-    c = 'c';
-    s = "+=!24c";
-    char *res = ft_strchr(s, c);
+
+    c = '\0';
+    s = "+=!2c!4c";
+    char *res = ft_strrchr(s, c);
     if (res)
         printf("Found at offset: %ld\n", (long)(res - s));
     else
         printf("Character not found.\n");
-} */
-/* 
-1. Locates 1st occurrance of c (converted to a char) in the string s
-
-- Define string 
-- Convert to char
-- While string != "/0"
-- i++
-- if i = c, return c
-- if /0, return Null.
-
-- ++i
-
-for (init; condition; step) 
-
- */
+ } */

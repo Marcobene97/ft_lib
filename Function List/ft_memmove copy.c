@@ -1,20 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memmove.c                                          :+:      :+:    :+:   */
+/*   ft_memmove copy.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
+/*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 18:59:31 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/11/03 15:52:00 by marcobenede      ###   ########.fr       */
+/*   Updated: 2025/11/12 13:30:40 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
-
+#include "libft.h"
 
  void *ft_memmove(void *dest, const void *src, size_t n)
  {
@@ -23,8 +20,6 @@
 
     d = (unsigned char *)dest;
     s = (const unsigned char *)src;
-
-    //build if statement that counts
     if (d < s)
    {
       for (size_t i = 0; i < n; i++) d[i] = s[i];
@@ -36,13 +31,14 @@
 
    return dest;
  }
- int main(void)
+ 
+/*  int main(void)
  {
     char dest[15] = "sonounfallito";
     ft_memmove(dest + 4, dest, 4);
     printf("%s\n", dest);
     return(0);
- }
+ } */
 
 /*  Alternative Approaches:
 

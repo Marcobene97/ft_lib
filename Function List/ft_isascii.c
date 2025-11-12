@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isprint.c                                          :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 18:59:31 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/10/13 19:30:51 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/11/12 13:27:55 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
-int ft_isprint(int c)
+int ft_isascii(int c)
 {
-    if(c >= 32 && c <= 126)
+    if(c >= 0 && c <= 127)
     {
         return (1);
     }
@@ -25,9 +24,9 @@ int ft_isprint(int c)
 }
 
 
-// int main(void)cc 
+// int main(void)
 // {
 //     int c;
-//     c = ft_isprint('\n');
+//     c = ft_isascii(5);
 //     printf("%i\n", (int)c);
 // }

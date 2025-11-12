@@ -1,43 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlcpy.c                                          :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
+/*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 14:58:09 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/11/02 17:09:24 by marcobenede      ###   ########.fr       */
+/*   Updated: 2025/11/12 17:35:20 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- #include <string.h>
+#include "libft.h"
 
  size_t ft_strlcpy(char *dst, const char *src, size_t size)
- {
-    
-   
-    size_t i = 0; 
-    while(src[i] != '\0') 
-    {
-      i++; 
-    } 
-    size_t lenstr = i;
-    
-    if(size == 0)
-    {
-      return(lenstr);
-    }
-    
-    i = 0;
-    while(i < size - 1 && i < lenstr)
-    {
-      dst[i] = src[i];
-      i++;
-    }
-    dst[i] = '\0';  
-    
-    return lenstr;
- }
+{
+  size_t i = 0; 
+  while(src[i] != '\0') 
+  {
+    i++; 
+  } 
+  size_t lenstr = i;
+  
+  if(size == 0)
+  {
+    return(lenstr);
+  }
+  
+  i = 0;
+  while(i < size - 1 && i < lenstr)
+  {
+    dst[i] = src[i];
+    i++;
+  }
+  dst[i] = '\0';  
+  
+  return lenstr;
+}
 
 
 /*   int main(void)

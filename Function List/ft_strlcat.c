@@ -1,65 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlcat.c                                          :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
+/*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 18:44:15 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/10/31 10:12:49 by marcobenede      ###   ########.fr       */
+/*   Updated: 2025/11/12 17:34:42 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
- size_t ft_strlcat(char *dst, const char *src, size_t size)
- {
-      size_t i;
-      size_t j;
-      size_t k;
-      size_t space;
+size_t ft_strlcat(char *dst, const char *src, size_t size)
+{
+  size_t i;
+  size_t j;
+  size_t k;
+  size_t space;
 
+  i = 0;
+  while(src[i] != '\0')
+    i++;
+  size_t srclen = i;
+  j = 0;
+  while(dst[j] != '\0' && j < size)
+    j++;
+  size_t dstlen = j;
+  if(dstlen >= size)
+    return(size + srclen);
+  space = size - dstlen - 1;
+  k = 0;
+  while(k < space && src[k] != '\0')
+  {
+    dst[dstlen + k] = src[k];
+    k++;
+  }
+  if(size > dstlen)
+    dst[dstlen + k] = '\0';
+  return(dstlen + srclen);
+}
 
-      i = 0;
-      while(src[i] != '\0')
-      {
-        i++;
-      }
-      size_t srclen = i;
-
-      j = 0;
-      while(dst[j] != '\0' && j < size)
-      {
-        j++;
-      }
-      size_t dstlen = j;
-
-      if(dstlen >= size)
-      {
-        return(size + srclen);
-      }
-      
-      space = size - dstlen - 1;
-      k = 0;
-      
-      while(k < space && src[k] != '\0')
-      {
-        dst[dstlen + k] = src[k];
-        k++;
-      }
-
-      if(size > dstlen)
-      {
-        dst[dstlen + k] = '\0';
-      }
-      
-    return(dstlen + srclen);
-
- }
-
- /*
- #include <stdio.h>
- 
  int main (void)
  {
     char dst[11] = "helloworld";
@@ -69,6 +50,7 @@
     printf("resulting string=%s\n", dst);
     return(0);
  }
+    /*
 
   1. Find how long dst already is (up to dstsize — to avoid going out of bounds).
 2. Find the length of src.

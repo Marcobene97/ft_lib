@@ -1,19 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
+/*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/11 22:48:16 by marcobenede       #+#    #+#             */
-/*   Updated: 2025/11/11 23:47:52 by marcobenede      ###   ########.fr       */
+/*   Created: 2025/10/08 18:59:31 by mbenedet          #+#    #+#             */
+/*   Updated: 2025/11/12 13:28:06 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "libft.h"
 
-int	main(void)
+int ft_isprint(int c)
 {
-	ft_putnbr_fd("456", 1);
-	return (0);
+    if(c >= 32 && c <= 126)
+    {
+        return (1);
+    }
+    else 
+        return (0);
 }
+
+
+// int main(void)cc 
+// {
+//     int c;
+//     c = ft_isprint('\n');
+//     printf("%i\n", (int)c);
+// }

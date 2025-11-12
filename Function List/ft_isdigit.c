@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isascii.c                                          :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 18:59:31 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/10/13 19:19:32 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/11/12 13:28:02 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-//  #include <unistd.h>
-//  #include <stdio.h>
-
-int ft_isascii(int c)
+int ft_isdigit(int c)
 {
-    if(c >= 0 && c <= 127)
+    if(c >= '0' && c <= '9')
     {
         return (1);
     }
-    else 
+    else
         return (0);
 }
 
@@ -28,6 +26,13 @@ int ft_isascii(int c)
 // int main(void)
 // {
 //     int c;
-//     c = ft_isascii(5);
+//     c = ft_isdigit('a');
 //     printf("%i\n", (int)c);
 // }
+
+/*
+isdigit() checks for a digit (0 through 9).
+trl_l,  is‐
+l, isxdigit_l -
+
+*/

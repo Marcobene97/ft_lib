@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalpha.c                                          :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
+/*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 16:04:03 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/11/09 22:09:56 by marcobenede      ###   ########.fr       */
+/*   Updated: 2025/11/12 15:08:50 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 int ft_isalpha(unsigned char c)
 {
@@ -22,6 +21,7 @@ int ft_isalpha(unsigned char c)
     else
         return (0);
 }
+/*
 
 int main(void)
 {
@@ -30,7 +30,6 @@ int main(void)
     printf("%i\n", (int)c);
 }
 
-/*
 Function class of isalpha: 1. isalpha()
               checks  for an alphabetic character; in the standard "C" locale,
               it is equivalent to (isupper(c) ||  islower(c)).   In  some  lo‐

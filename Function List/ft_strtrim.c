@@ -3,24 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
+/*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 18:59:31 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/11/10 10:28:46 by marcobenede      ###   ########.fr       */
+/*   Updated: 2025/11/12 17:46:37 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <unistd.h>
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
-
-// "Allocates memory (using malloc(3)) and returns a copy of ’s1’ with characters from ’set’ removed from the beginning and the end."
-/*
-1. Inputs check
-2. Find start(1st char to keep)
-3.
-*/
 
 static int	in_set(char c, const char *set)
 {
@@ -44,35 +34,22 @@ char *ft_strtrim(char const *s1, char const *set)
 	char *trimmedstr;
 
 	if (!s1 || !set)
-    return (NULL);
+    	return (NULL);
 	len = ft_strlen(s1);
-
 	start = 0;
 	while(s1[start] && in_set(s1[start], set))
-	start++;
-
+		start++;
 	if(s1[start] == '\0')
-	{
-		trimmedstr = (char *)malloc(1);
-		if (!trimmedstr)
-			return (NULL);
-		trimmedstr[0] = '\0';
-		return (trimmedstr);
-	}
-
+	return(ft_strdup(trimmedstr));
 	end = len - 1;
 	while (end > start && in_set(s1[end], set))
     end--;
-
 	trimmedstr = (char *)malloc(end - start + 2);
 	if(!trimmedstr)
-	return(NULL);
-
+		return(NULL);
 	i = 0;
 	while(start <= end)
-	{
-		trimmedstr[i++] = s1[start++];
-	}
+	trimmedstr[i++] = s1[start++];
 	trimmedstr[i] = '\0';
 	return(trimmedstr);
 }
@@ -90,3 +67,10 @@ int main(void)
 	free(trimmedstr);
 	return(0);
 }
+
+// "Allocates memory (using malloc(3)) and returns a copy of ’s1’ with characters from ’set’ removed from the beginning and the end."
+/*
+1. Inputs check
+2. Find start(1st char to keep)
+3.
+*/

@@ -3,25 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
+/*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 21:03:28 by marcobenede       #+#    #+#             */
-/*   Updated: 2025/11/11 07:55:09 by marcobenede      ###   ########.fr       */
+/*   Updated: 2025/11/12 13:28:44 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Allocates memory (using malloc(3)) and returns a string representing the integer received as an argument.
-ft_itoa takes an integer (like 42, -17, or 0)
-and returns a new string in memory (allocated with malloc)
-that contains the text version of that number.
-
-basically converts integer into a string
- */
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "libft.h"
 
 static long	getabsolute(int n, int *isnegative)
@@ -92,6 +80,7 @@ char *ft_itoa(int n)
     str[0] = '-';
 	return (str);
 }
+
 /* int main(void)
 {
 	char *res;
@@ -137,6 +126,16 @@ char *ft_itoa(int n)
 
     return (0);
 } */
+
+/*
+Allocates memory (using malloc(3)) and returns a string representing the integer received as an argument.
+ft_itoa takes an integer (like 42, -17, or 0)
+and returns a new string in memory (allocated with malloc)
+that contains the text version of that number.
+
+basically converts integer into a string
+ */
+
 
 /*
 - 1ST CHECK TO CHECK 1ST HELPER

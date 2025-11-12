@@ -1,20 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   atoi.c                                             :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
+/*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 18:59:31 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/11/10 21:20:37 by marcobenede      ###   ########.fr       */
+/*   Updated: 2025/11/12 15:08:24 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-The atoi() function converts the initial portion of the string pointed to by str to int representation
- */
-//#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 int ft_atoi(const char *nptr)
 {
@@ -44,6 +40,8 @@ int ft_atoi(const char *nptr)
     }
     return(sign * acc);
 }
+/*
+The atoi() function converts the initial portion of the string pointed to by str to int representation 
 
 int main(void)
 {
@@ -51,4 +49,4 @@ int main(void)
   int res = ft_atoi(nptr);
   printf("res is %d\n", res);
   return(0);
-}
+} */
