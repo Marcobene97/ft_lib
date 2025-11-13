@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marcobenedettelli <marcobenedettelli@st    +#+  +:+       +#+        */
+/*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 21:38:18 by marcobenede       #+#    #+#             */
-/*   Updated: 2025/11/11 22:02:22 by marcobenede      ###   ########.fr       */
+/*   Updated: 2025/11/13 13:16:01 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	unsigned int i;
+	unsigned int	i;
 
-	if(s == NULL || f == NULL)
-        return;
+	if (s == NULL || f == NULL)
+		return ;
 	i = 0;
 	while (s[i])
 	{
@@ -26,16 +26,7 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*))
 	}
 }
 
-/* void to_uppercase(unsigned int i, char *c)
-{
-	(void)i;
-    if( *c >='a' && *c <= 'z')
-    {
-        *c = *c - 32;
-    }
-}
-
-int main(void)
+/* int main(void)
 {
 	 char d[] = "marco";
 	ft_striteri(d, to_uppercase);

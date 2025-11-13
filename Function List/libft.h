@@ -6,7 +6,7 @@
 /*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 04:28:38 by marcobenede       #+#    #+#             */
-/*   Updated: 2025/11/12 15:30:17 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/11/13 14:29:50 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@
 # include <unistd.h>
 # include <stdarg.h>
 # include <fcntl.h>
-
 
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);

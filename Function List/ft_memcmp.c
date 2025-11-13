@@ -6,39 +6,36 @@
 /*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 18:59:31 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/11/12 13:31:34 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/11/13 11:35:37 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-    size_t i;
+	size_t				i;
+	const unsigned char	*str1;
+	const unsigned char	*str2;
 
-    i = 0;
-    while(i < n && s1 && s2)
-    {
-        if(s1 == s2)
-        return(0);
-        if(s1 != s2)
-        {
-            return(s1 - s2);
-        }
-        i++;
-    }
+	str1 = (const unsigned char *)s1;
+	str2 = (const unsigned char *)s2;
+	i = 0;
+	while (i < n && str1 && str2)
+	{
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
+		i++;
+	}
+	return (0);
 }
 
 /* int main(void)
 {
-    const char s1[] = "abcde";
-    const char s2[] = "efgba";
-    size_t n = 4;
-    int res = ft_memcmp(s1, s2, n);
-    printf("%lu\n", res);
-    return(0);
+	const char s1[] = "abcde";
+	const char s2[] = "efgba";
+	size_t n = 4;
+	int res = ft_memcmp(s1, s2, n);
+	printf("%d\n", res);
+	return(0);
 } */
-
-
-// function locates the first occurrence of c (converted to an unsigned char) in string s
-//returns a pointer to the byte located, or NULL if no such byte exists within n bytes
