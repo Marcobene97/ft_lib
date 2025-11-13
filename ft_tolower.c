@@ -6,13 +6,13 @@
 /*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 11:48:17 by marcobenede       #+#    #+#             */
-/*   Updated: 2025/11/13 14:23:15 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/11/13 16:51:23 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		c = c + 32;

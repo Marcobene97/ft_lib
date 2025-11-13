@@ -6,15 +6,15 @@
 /*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 16:04:03 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/11/13 14:42:42 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/11/13 16:46:50 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalpha(unsigned char c)
+int ft_isalpha(int c)
 {
-    if  (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
+    if  ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
     {
         return (1);
     }
