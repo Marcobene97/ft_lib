@@ -6,7 +6,7 @@
 /*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 00:11:07 by marcobenede       #+#    #+#             */
-/*   Updated: 2025/11/13 13:10:22 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/11/13 14:43:06 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,18 +43,3 @@ char	*ft_strchr(const char *s, int c)
 	else
 		printf("Character not found.\n");
 } */
-/* 
-1. Locates 1st occurrance of c (converted to a char) in the string s
-
-- Define string 
-- Convert to char
-- While string != "/0"
-- i++
-- if i = c, return c
-- if /0, return Null.
-
-- ++i
-
-for (init; condition; step) 
-
- */

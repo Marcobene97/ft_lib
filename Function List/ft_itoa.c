@@ -6,7 +6,7 @@
 /*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 21:03:28 by marcobenede       #+#    #+#             */
-/*   Updated: 2025/11/13 11:12:22 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/11/13 14:41:34 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,11 +61,11 @@ static void	fill_digits(char *str, long nb, int index_end)
 
 char	*ft_itoa(int n)
 {
-	size_t	total_len;
-	int		len;
-	char	*str;
-	long	nb;
-	int		isnegative;
+	size_t		total_len;
+	int			len;
+	char		*str;
+	long		nb;
+	int			isnegative;
 
 	nb = getabsolute(n, &isnegative);
 	len = count_digits(nb);
