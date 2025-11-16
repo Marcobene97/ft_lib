@@ -6,7 +6,7 @@
 /*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 16:31:02 by marcobenede       #+#    #+#             */
-/*   Updated: 2025/11/13 13:49:57 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/11/16 18:09:28 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,13 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
+// int main(void)
+// {
+//     printf("%p\n", (void *)ft_strnstr("fake", NULL, 3));  // NULL
+//     printf("%p\n", (void *)ft_strnstr(NULL, "fake", 3));  // NULL
+//     printf("%p\n", (void *)ft_strnstr("", "", (size_t)-1)); 
+// non-NULL (points to "")
+// }
 /* int main(void)
 {
 	const char *big = "helloworld";
@@ -47,3 +54,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	else
 	printf("not found\n");
 } */
+/* 	
+	if (!little)
+		return (NULL);
+	if (*little == '\0')
+		return ((char *)big);
+	if (!big)
+		return (NULL);  */

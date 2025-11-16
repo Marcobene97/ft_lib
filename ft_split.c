@@ -6,7 +6,7 @@
 /*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 11:24:05 by marcobenede       #+#    #+#             */
-/*   Updated: 2025/11/16 12:46:53 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/11/16 15:53:32 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ char	**ft_split(char const *s, char c)
 		if (!arr[i[1]++] && --i[1])
 			return (free_words(arr, i[1]), NULL);
 	}
-	return (arr[i[1]] = (NULL), arr);
+	return (arr[i[1]] = NULL, arr);
 }
 /* int main(void)
 {

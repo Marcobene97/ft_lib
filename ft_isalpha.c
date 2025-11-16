@@ -6,7 +6,7 @@
 /*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 16:04:03 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/11/16 12:33:08 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/11/16 17:38:21 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,13 @@
 int	ft_isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-	{
 		return (1);
-	}
-	else
-		return (0);
+	return (0);
 }
 
 /* int main(void)
 {
 	int c;
-	c = ft_isalpha('a');
+	c = ft_isalpha('/');
 	printf("%i\n", (int)c);
 } */
