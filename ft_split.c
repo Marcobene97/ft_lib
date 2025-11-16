@@ -6,7 +6,7 @@
 /*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 11:24:05 by marcobenede       #+#    #+#             */
-/*   Updated: 2025/11/13 16:52:05 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/11/16 12:46:53 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,25 +74,22 @@ char	**ft_split(char const *s, char c)
 	}
 	return (arr[i[1]] = (NULL), arr);
 }
-// int main(void)
-// {
-// 	char const	*s = "yo who is this";
-// 	char		c = ' ';
-// 	char	  **arr;
-// 	size_t		i;
-
-
-// 	arr = ft_split(s, c);
-// 	if (!arr)
-// 		return (1);
-
-// 	i = 0;
-// 	while (arr[i])
-// 	{
-// 		printf("word[%zu]: %s\n", i, arr[i]);
-// 		free(arr[i]);
-// 		i++;
-// 	}
-// 	free(arr);
-// 	return (0);
-// }
+/* int main(void)
+{
+	char const	*s = "yo who is this";
+	char		c = ' ';
+	char	  **arr;
+	size_t		i;
+	arr = ft_split(s, c);
+	if (!arr)
+		return (1);
+	i = 0;
+	while (arr[i])
+	{
+		printf("word[%zu]: %s\n", i, arr[i]);
+		free(arr[i]);
+		i++;
+	}
+	free(arr);
+	return (0);
+} */

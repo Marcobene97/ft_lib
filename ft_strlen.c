@@ -6,7 +6,7 @@
 /*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 18:59:31 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/11/13 13:31:56 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/11/16 12:47:42 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlen(const char *string)
 	{
 		c++;
 	}
-	   return (c);
+	return (c);
 }
 
 /* int main(void)

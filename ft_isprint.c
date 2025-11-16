@@ -6,7 +6,7 @@
 /*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 18:59:31 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/11/13 11:49:10 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/11/16 12:40:18 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_isprint(int c)
 	{
 		return (1);
 	}
-	else 
+	else
 		return (0);
 }
 /* int main(void)cc 
