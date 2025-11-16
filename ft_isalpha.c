@@ -6,7 +6,7 @@
 /*   By: mbenedet <mbenedet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 16:04:03 by mbenedet          #+#    #+#             */
-/*   Updated: 2025/11/16 17:38:21 by mbenedet         ###   ########.fr       */
+/*   Updated: 2025/11/16 18:45:44 by mbenedet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ int	ft_isalpha(int c)
 /* int main(void)
 {
 	int c;
-	c = ft_isalpha('/');
+	c = ft_isalpha('o');
 	printf("%i\n", (int)c);
 } */
